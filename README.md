@@ -1,58 +1,75 @@
-# CareerNova – Smart Recruitment & Career Management Platform
+# 🚀 CareerNova – Smart Recruitment & Career Management Platform
 
-**CareerNova** is a web-based **Recruitment and Career Management Platform** developed to streamline the hiring process between **Candidates, HR Professionals, Companies, and Administrators**.
+> **A Java Full Stack web application designed to manage the complete recruitment lifecycle for Candidates, HR, Companies, and Administrators.**
 
-The platform provides role-based access and centralized recruitment management, allowing companies to post jobs, HR teams to manage applications and interviews, candidates to apply for opportunities, and administrators to manage the overall system.
+## 🎥 Project Demo
 
-> **Developed as a Java Full Stack project to demonstrate practical skills in Java Web Development, JDBC, Oracle Database, JSP, Servlets, and role-based application design.**
-
----
-
-## 🚀 Project Objective
-
-The main objective of CareerNova is to create a centralized recruitment platform that simplifies and manages the complete hiring workflow.
-
-The system helps organizations:
-
-* Manage companies and HR users
-* Manage candidate profiles
-* Create and manage job postings
-* Receive and review job applications
-* Shortlist candidates
-* Assign applications to HR
-* Schedule and manage interviews
-* Record interview feedback
-* Track recruitment progress
-* Generate recruitment-related reports
+▶️ **[Watch CareerNova Project Demo on LinkedIn](PASTE-LINKEDIN-VIDEO-LINK-HERE)**
 
 ---
 
-## 👥 User Roles
+## 📌 About the Project
 
-CareerNova provides different functionality based on the user's role.
+**CareerNova** is a web-based **Recruitment and Career Management Platform** developed to simplify and manage the hiring process in a centralized system.
 
-### 🔐 Administrator
+The application provides **role-based access** for four major users:
 
-The Admin manages the overall platform.
+* 🔐 Administrator
+* 🏢 Company
+* 👨‍💼 HR
+* 👨‍🎓 Candidate
 
-**Features:**
+The platform allows companies to manage jobs, candidates to apply for opportunities, HR teams to review and shortlist candidates, conduct interviews, provide feedback, and administrators to manage the overall recruitment system.
+
+> **CareerNova was developed as a practical Java Full Stack project to gain real-world experience in Java Web Development, JDBC, Oracle Database, JSP, Servlets, DAO architecture, session management, and role-based application development.**
+
+---
+
+## 🎯 Project Objective
+
+The primary objective of CareerNova is to create a centralized recruitment platform that manages the complete hiring workflow from **job posting to candidate selection**.
+
+### The system provides:
+
+* Company and HR management
+* Candidate profile management
+* Job posting and management
+* Job application processing
+* HR application assignment
+* Application review
+* Candidate shortlisting
+* Interview management
+* Interview feedback
+* Recruitment status tracking
+* Administrative reports
+
+---
+
+# 👥 User Roles & Functionalities
+
+## 🔐 Administrator
+
+The Administrator manages the overall recruitment platform.
+
+### Features
 
 * Admin Login
+* Admin Dashboard
 * Manage Companies
 * Manage HR
 * Manage Candidates
-* View company information
-* Manage user accounts
-* Recruitment reports
-* Centralized system management
+* Manage User Accounts
+* View Company Information
+* Recruitment Reports
+* Centralized System Management
 
 ---
 
-### 🏢 Company
+## 🏢 Company
 
-Companies can manage their recruitment activities.
+Companies can manage their recruitment activities through the company dashboard.
 
-**Features:**
+### Features
 
 * Company Login
 * Company Dashboard
@@ -60,82 +77,94 @@ Companies can manage their recruitment activities.
 * Post New Jobs
 * Manage Jobs
 * View Job Applications
-* Monitor recruitment activities
+* Monitor Recruitment Activities
 
 ---
 
-### 👨‍💼 HR
+## 👨‍💼 HR
 
-HR users are responsible for managing the candidate selection process.
+HR users handle the candidate screening and selection process.
 
-**Features:**
+### Features
 
+* HR Login
 * HR Dashboard
 * View Assigned Applications
 * Pending Application Review
-* Candidate Profile Management
+* View Candidate Profiles
 * Shortlist Candidates
 * Schedule Interviews
 * Submit Interview Feedback
-* Track candidate recruitment status
+* Track Candidate Recruitment Status
 
 ---
 
-### 👨‍🎓 Candidate
+## 👨‍🎓 Candidate
 
-Candidates can search and participate in the recruitment process.
+Candidates can participate in the recruitment process.
 
-**Features:**
+### Features
 
 * Candidate Login
+* Candidate Dashboard
 * Manage Candidate Profile
 * View Available Jobs
 * Apply for Jobs
 * Track Application Status
 * View Recruitment Progress
-* Interview-related information
+* Interview Information
 
 ---
 
-## 🔄 Recruitment Workflow
+# 🔄 Recruitment Workflow
 
 ```text
-Candidate
-    │
-    ▼
-View Available Jobs
-    │
-    ▼
-Apply for Job
-    │
-    ▼
-Application Created
-    │
-    ▼
-HR Reviews Application
-    │
-    ├──► Rejected
-    │
-    ▼
-Shortlisted
-    │
-    ▼
-Interview Scheduled
-    │
-    ▼
-Interview Feedback
-    │
-    ├──► Rejected
-    │
-    ▼
-Selected
+                    ┌───────────────┐
+                    │   Candidate   │
+                    └───────┬───────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │   View Jobs       │
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │   Apply for Job   │
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │ Application Created│
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │    HR Review      │
+                  └─────────┬─────────┘
+                            │
+                    ┌───────┴────────┐
+                    │                │
+                    ▼                ▼
+                Rejected         Shortlisted
+                                     │
+                                     ▼
+                           Interview Scheduled
+                                     │
+                                     ▼
+                            Interview Feedback
+                                     │
+                              ┌──────┴──────┐
+                              │             │
+                              ▼             ▼
+                          Rejected       Selected
 ```
 
 ---
 
-## 🛠️ Technology Stack
+# 🛠️ Technology Stack
 
-| Technology          | Usage                       |
+| Technology          | Purpose                     |
 | ------------------- | --------------------------- |
 | **Java**            | Backend Development         |
 | **JSP**             | Dynamic Web Pages           |
@@ -143,75 +172,122 @@ Selected
 | **JDBC**            | Database Connectivity       |
 | **Oracle Database** | Data Storage                |
 | **HTML5**           | Page Structure              |
-| **CSS3**            | UI Design                   |
-| **Apache Tomcat**   | Web Server                  |
+| **CSS3**            | User Interface              |
+| **Apache Tomcat 9** | Application Server          |
 | **Eclipse IDE**     | Development Environment     |
 | **Git & GitHub**    | Version Control             |
 
 ---
 
-## 🏗️ Application Architecture
+# 🏗️ Application Architecture
 
 CareerNova follows a structured **Java Web MVC-style architecture**.
 
 ```text
-                 ┌─────────────────────┐
-                 │      User / Browser │
-                 └──────────┬──────────┘
+                 ┌──────────────────────┐
+                 │     User / Browser   │
+                 └──────────┬───────────┘
                             │
                             ▼
-                 ┌─────────────────────┐
-                 │       JSP / UI      │
-                 └──────────┬──────────┘
+                 ┌──────────────────────┐
+                 │       JSP / UI       │
+                 └──────────┬───────────┘
                             │
                             ▼
-                 ┌─────────────────────┐
-                 │      Servlets       │
-                 └──────────┬──────────┘
+                 ┌──────────────────────┐
+                 │       Servlets       │
+                 └──────────┬───────────┘
                             │
                             ▼
-                 ┌─────────────────────┐
-                 │       DAO Layer     │
-                 └──────────┬──────────┘
+                 ┌──────────────────────┐
+                 │       DAO Layer      │
+                 └──────────┬───────────┘
                             │
                             ▼
-                 ┌─────────────────────┐
-                 │    JDBC Connection  │
-                 └──────────┬──────────┘
+                 ┌──────────────────────┐
+                 │    JDBC Connection   │
+                 └──────────┬───────────┘
                             │
                             ▼
-                 ┌─────────────────────┐
-                 │   Oracle Database   │
-                 └─────────────────────┘
+                 ┌──────────────────────┐
+                 │   Oracle Database    │
+                 └──────────────────────┘
 ```
 
 ---
 
-## 🗄️ Database
+# 🗄️ Database
 
-The application uses **Oracle Database** for storing and managing recruitment data.
+CareerNova uses **Oracle Database** to store and manage recruitment-related information.
 
-### Main Database Tables
+### Main Tables
 
-* `USER_ACCOUNT`
-* `COMPANY`
-* `CANDIDATE`
-* `JOB`
-* `JOB_APPLICATION`
-* `INTERVIEW`
-* `INTERVIEW_FEEDBACK`
+```text
+USER_ACCOUNT
+COMPANY
+CANDIDATE
+JOB
+JOB_APPLICATION
+INTERVIEW
+INTERVIEW_FEEDBACK
+```
 
-The database is designed to maintain relationships between users, companies, jobs, candidates, applications, interviews, and feedback.
+These tables manage relationships between users, companies, candidates, jobs, applications, interviews, and interview feedback.
 
 ---
 
-## 📂 Project Structure
+# ✨ Key Features
+
+## 🔑 Authentication & Authorization
+
+* Role-based login
+* Role-specific dashboards
+* Session management
+* Login validation
+* Logout functionality
+* Access based on user role
+
+## 💼 Job Management
+
+* Create job postings
+* View available jobs
+* Manage jobs
+* Track job applications
+* Connect jobs with candidates
+
+## 📄 Application Management
+
+* Candidate job applications
+* Application status tracking
+* HR application review
+* Assigned applications
+* Candidate shortlisting
+
+## 🎯 Candidate Selection
+
+* Candidate profile viewing
+* Application review
+* Candidate shortlisting
+* Interview scheduling
+* Interview feedback
+* Recruitment status tracking
+
+## 📊 Reports
+
+* Recruitment information
+* Application tracking
+* Candidate information
+* Company information
+* Administrative reporting
+
+---
+
+# 📂 Project Structure
 
 ```text
 CareerNova/
 │
 ├── Java Resources/
-│   │
 │   └── src/
 │       └── com.careernova/
 │           │
@@ -237,7 +313,6 @@ CareerNova/
 │               └── ...
 │
 ├── WebContent/
-│   │
 │   ├── AdminHome.jsp
 │   ├── CompanyHome.jsp
 │   ├── HRHome.jsp
@@ -251,88 +326,46 @@ CareerNova/
 
 ---
 
-## ✨ Key Features
+# 🔒 Security & Validation
 
-### 🔑 Authentication & Authorization
+The application implements application-level controls including:
 
-* Secure login-based access
-* Role-based dashboards
-* Separate functionality for Admin, Company, HR and Candidate
-* Session-based authentication
-* Logout functionality
-
-### 💼 Job Management
-
-* Create job postings
-* View available jobs
-* Manage existing jobs
-* Connect jobs with applications
-
-### 📄 Application Management
-
-* Candidate job applications
-* Application status tracking
-* HR application review
-* Candidate shortlisting
-* Assigned application management
-
-### 🎯 Candidate Selection
-
-* Review candidate profiles
-* Shortlist candidates
-* Track recruitment status
-* Interview scheduling
-* Interview feedback management
-
-### 📊 Reports
-
-* Recruitment-related information
-* Application tracking
-* Candidate and company data
-* Administrative reporting
-
----
-
-## 🔒 Security & Validation
-
-The project includes application-level controls such as:
-
-* Role-based access
+* Role-based access control
 * Session management
 * Login validation
 * Form validation
 * Database constraints
-* Controlled database operations through DAO classes
-* Logout and session invalidation
+* DAO-based database operations
+* Session invalidation during logout
 
 ---
 
-## 🖥️ Screens / Modules
+# 🖥️ Application Modules
 
-The application includes dedicated interfaces for:
+CareerNova contains dedicated interfaces for:
 
-* Login
-* Admin Dashboard
-* Company Dashboard
-* HR Dashboard
-* Candidate Dashboard
-* Company Management
-* HR Management
-* Candidate Management
-* Job Management
-* Job Applications
-* Assigned Applications
-* Pending Reviews
-* Shortlisted Candidates
-* Interview Management
-* Interview Feedback
-* Reports
+* 🔐 Login
+* 📊 Admin Dashboard
+* 🏢 Company Dashboard
+* 👨‍💼 HR Dashboard
+* 👨‍🎓 Candidate Dashboard
+* 🏢 Company Management
+* 👨‍💼 HR Management
+* 👨‍🎓 Candidate Management
+* 💼 Job Management
+* 📄 Job Applications
+* 📋 Assigned Applications
+* 🔎 Pending Reviews
+* ⭐ Shortlisted Candidates
+* 📅 Interview Management
+* 📝 Interview Feedback
+* 📊 Reports
 
 ---
 
-## 📌 What I Learned From This Project
+# 🧠 Skills Demonstrated
 
-Through CareerNova, I gained practical experience in:
+This project helped me develop practical experience in:
 
 * Core Java
 * Advanced Java
@@ -340,45 +373,46 @@ Through CareerNova, I gained practical experience in:
 * JSP
 * JDBC
 * Oracle SQL
-* DAO Pattern
 * JavaBeans
-* MVC-style architecture
-* Session Management
+* DAO Pattern
+* MVC-style Architecture
 * CRUD Operations
+* SQL Joins
+* Session Management
 * Role-Based Access Control
 * Database Design
-* SQL Joins
 * Exception Handling
 * Web Application Debugging
-* Git & GitHub
 * Apache Tomcat
 * Eclipse IDE
+* Git & GitHub
 
 ---
 
-## 🎯 Project Highlights
+# 📈 Future Enhancements
 
-* ✔ Multi-role recruitment platform
-* ✔ Java-based backend
-* ✔ JSP & Servlet-based web application
-* ✔ Oracle database integration
-* ✔ JDBC-based database operations
-* ✔ Role-based dashboards
-* ✔ Complete recruitment workflow
-* ✔ Job and application management
-* ✔ Candidate shortlisting
-* ✔ Interview management
-* ✔ Interview feedback
-* ✔ Administrative reports
-* ✔ GitHub version control
+Possible future improvements include:
+
+* 📧 Email notifications
+* 🔐 OTP-based authentication
+* 📄 Resume upload and management
+* 🔎 Advanced job search and filtering
+* 🎥 Online interview integration
+* 🤖 Automated candidate-job matching
+* 📊 Advanced recruitment analytics
+* 🌐 REST API integration
+* 🚀 Spring Boot migration
+* 🔐 Spring Security integration
+* ⚛️ React/Angular frontend
+* ☁️ Cloud deployment
 
 ---
 
-## ⚙️ How to Run the Project
+# ⚙️ How to Run
 
-### Prerequisites
+## Prerequisites
 
-Make sure the following are installed:
+Install the following:
 
 * Java JDK
 * Eclipse IDE
@@ -387,29 +421,33 @@ Make sure the following are installed:
 * Oracle JDBC Driver
 * Git
 
-### Setup
+## Setup
 
-1. Clone the repository:
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Abhishek-Dangare/CareerNova.git
 ```
 
-2. Import the project into Eclipse.
+### 2. Import into Eclipse
 
-3. Configure Apache Tomcat Server.
+Import the project into Eclipse as a Java Web/Dynamic Web Project.
 
-4. Configure the Oracle Database connection.
+### 3. Configure Apache Tomcat
 
-5. Add the Oracle JDBC driver to the project.
+Add and configure **Apache Tomcat 9** in Eclipse.
 
-6. Create the required database tables.
+### 4. Configure Oracle Database
 
-7. Update the database connection details in the DAO/database connection class.
+Create the required database tables and configure the database connection used by the application.
 
-8. Start Apache Tomcat.
+### 5. Configure JDBC
 
-9. Open the application in the browser.
+Add the Oracle JDBC driver to the project.
+
+### 6. Run the Application
+
+Start Apache Tomcat and open:
 
 ```text
 http://localhost:8080/CareerNova/
@@ -417,49 +455,44 @@ http://localhost:8080/CareerNova/
 
 ---
 
-## 📈 Future Enhancements
+# 🎯 Why I Built CareerNova
 
-The project can be further enhanced with:
+I developed CareerNova as a **real-world Java Full Stack project** to move beyond basic coding exercises and gain practical experience in designing and developing a complete web application.
 
-* Email notifications
-* OTP-based authentication
-* Resume upload and management
-* Advanced job search and filtering
-* Online interview integration
-* Automated candidate matching
-* Recruitment analytics dashboard
-* REST API integration
-* Spring Boot migration
-* Spring Security integration
-* React/Angular frontend
-* Cloud deployment
+The project demonstrates my ability to work with:
+
+**Frontend → Backend → Database → Authentication → Business Logic → Recruitment Workflow → Version Control**
+
+It was built with a focus on learning **real application development, problem solving, database integration, debugging, and software architecture**.
 
 ---
 
-## 👨‍💻 Developer
+# 👨‍💻 Developer
 
-**Abhishek Dangare**
+## Abhishek Dangare
 
-Java Full Stack Developer | BCS Student
+**Java Full Stack Developer | BCS Student**
 
-### Technical Interests
+### Areas of Interest
 
 * Java Development
 * Full Stack Web Development
-* Database Management
 * Backend Development
+* Database Management
+* Web Application Development
 * Cyber Security
 
 ---
 
-## ⭐ Project Purpose
+# ⭐ Project Repository
 
-CareerNova was developed as a **practical Java Full Stack project for building real-world development experience and demonstrating software development skills for internship and entry-level job opportunities.**
+**GitHub:**
+https://github.com/Abhishek-Dangare/CareerNova
 
-If you find this project useful, consider giving the repository a ⭐ on GitHub.
+If you find this project useful or interesting, feel free to ⭐ the repository.
 
 ---
 
-### 📜 License
+## 📜 License
 
-This project is developed for **educational and portfolio purposes**.
+This project was developed for **educational, learning, portfolio, internship, and entry-level job application purposes**.
