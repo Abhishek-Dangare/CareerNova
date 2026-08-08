@@ -1,0 +1,574 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CareerNova - Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(37,99,235,.35), transparent 35%),
+        radial-gradient(circle at 90% 80%, rgba(14,165,233,.25), transparent 35%),
+        linear-gradient(135deg,#07111f,#0f172a 50%,#111827);
+    padding:20px;
+}
+
+/* Main Container */
+
+.login-container{
+    width:100%;
+    max-width:950px;
+    min-height:580px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+}
+
+/* Left Section */
+
+.left-section{
+    position:relative;
+    padding:55px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37,99,235,.95),
+            rgba(15,23,42,.95)
+        );
+
+    overflow:hidden;
+}
+
+.left-section::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    background:rgba(56,189,248,.18);
+
+    top:-100px;
+    right:-100px;
+}
+
+.left-section::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.15);
+
+    bottom:-70px;
+    left:-70px;
+}
+
+.logo{
+    font-size:34px;
+    font-weight:800;
+    letter-spacing:.5px;
+    color:white;
+
+    margin-bottom:25px;
+
+    position:relative;
+    z-index:2;
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+.left-section h1{
+    font-size:42px;
+    line-height:1.15;
+
+    margin-bottom:20px;
+
+    position:relative;
+    z-index:2;
+}
+
+.left-section h1 span{
+    color:#38bdf8;
+}
+
+.left-section p{
+    color:#dbeafe;
+    font-size:16px;
+    line-height:1.7;
+
+    max-width:390px;
+
+    position:relative;
+    z-index:2;
+}
+
+.features{
+    margin-top:30px;
+
+    position:relative;
+    z-index:2;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+
+    margin:15px 0;
+
+    color:#e0f2fe;
+    font-size:15px;
+}
+
+.feature-icon{
+    width:34px;
+    height:34px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:12px;
+
+    border-radius:9px;
+
+    background:rgba(255,255,255,.12);
+
+    color:#38bdf8;
+    font-weight:bold;
+}
+
+/* Right Section */
+
+.right-section{
+    background:rgba(255,255,255,.96);
+
+    padding:55px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.login-title{
+    font-size:30px;
+    color:#0f172a;
+
+    margin-bottom:8px;
+}
+
+.login-subtitle{
+    color:#64748b;
+    font-size:14px;
+
+    margin-bottom:30px;
+}
+
+/* Form */
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+
+    color:#334155;
+    font-size:14px;
+    font-weight:600;
+
+    margin-bottom:8px;
+}
+
+.input-wrapper{
+    position:relative;
+}
+
+.input-icon{
+    position:absolute;
+
+    left:14px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#64748b;
+    font-size:17px;
+}
+
+input{
+    width:100%;
+
+    padding:14px 15px 14px 45px;
+
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+    color:#0f172a;
+
+    background:#f8fafc;
+
+    transition:.3s;
+}
+
+input:focus{
+    border-color:#2563eb;
+
+    background:white;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.10);
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+/* Remember */
+
+.login-options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin:5px 0 22px;
+
+    font-size:13px;
+}
+
+.remember{
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    color:#64748b;
+}
+
+.remember input{
+    width:auto;
+    padding:0;
+}
+
+.forgot{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.forgot:hover{
+    text-decoration:underline;
+}
+
+/* Button */
+
+button{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #0284c7
+        );
+
+    color:white;
+
+    font-size:16px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+        0 8px 20px rgba(37,99,235,.25);
+}
+
+button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37,99,235,.35);
+}
+
+button:active{
+    transform:translateY(0);
+}
+
+/* Register */
+
+.register-text{
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#64748b;
+
+    font-size:14px;
+}
+
+.register-text a{
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:700;
+}
+
+.register-text a:hover{
+    text-decoration:underline;
+}
+
+/* Security Text */
+
+.security{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    margin-top:25px;
+
+    color:#94a3b8;
+
+    font-size:12px;
+}
+
+/* Responsive */
+
+@media(max-width:800px){
+
+    .login-container{
+        grid-template-columns:1fr;
+        max-width:500px;
+    }
+
+    .left-section{
+        display:none;
+    }
+
+    .right-section{
+        padding:40px 30px;
+    }
+
+}
+
+@media(max-width:450px){
+
+    body{
+        padding:10px;
+    }
+
+    .login-container{
+        border-radius:18px;
+    }
+
+    .right-section{
+        padding:35px 22px;
+    }
+
+    .login-title{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left-section">
+
+        <div class="logo">
+            Career<span>Nova</span>
+        </div>
+
+        <h1>
+            Build Your<br>
+            <span>Career Future.</span>
+        </h1>
+
+        <p>
+            Welcome to CareerNova, a modern career management
+            platform connecting candidates, HR professionals
+            and companies in one place.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="feature-icon">✓</div>
+                Find the right opportunities
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">✓</div>
+                Manage applications easily
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">✓</div>
+                Connect with top companies
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right-section">
+
+        <h2 class="login-title">
+            Welcome Back 👋
+        </h2>
+
+        <p class="login-subtitle">
+            Login to your CareerNova account
+        </p>
+
+
+        <form action="login" method="post">
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">✉</span>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">🔒</span>
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="login-options">
+
+                <label class="remember">
+
+                    <input type="checkbox">
+
+                    Remember me
+
+                </label>
+
+               <a href="ForgotPassword.jsp">Forgot Password?</a>
+     
+
+            </div>
+
+
+            <button type="submit">
+                Login →
+            </button>
+
+        </form>
+
+
+        <p class="register-text">
+
+            Don't have an account?
+
+            <a href="Register.jsp">
+                Create Account
+            </a>
+
+        </p>
+
+
+        <div class="security">
+
+            🔒 Secure & Protected Login
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+```
