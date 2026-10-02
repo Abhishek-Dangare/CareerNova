@@ -4,7 +4,7 @@
 
 ## 🎥 Project Demo
 
-▶️ **[Watch CareerNova Project Demo on LinkedIn](https://lnkd.in/p/gjQnpm2P)**
+▶️ **[Watch CareerNova Project Demo on LinkedIn]([https://lnkd.in/p/gjQnpm2P](https://lnkd.in/p/gtDjPb6H))**
 
 ---
 
